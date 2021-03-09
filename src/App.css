@@ -1,22 +1,59 @@
 body {
   background-color: rgb(100, 100, 100);
 }
-
+/* ------------------------------------------------------------------------------------------------------ */
+/* DIV IN APP.JS */
   .primary_container{
     display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
     width:75%;
     min-height: 75px;
     margin: auto;
-    text-align: center;
-    justify-content: center;
-    border: 2px inset rgb(105, 193, 252);
     border-left-width: 0.1px;
     border-bottom-width: 0.1px;
+    background-color: rgb(90, 90, 90);
+    box-shadow: 0px 0px 32px 24px rgb(80,80,80);
   }
-
+    .btn{
+      margin: 2.5% auto;
+      width: 33%;
+    }
+/* ------------------------------------------------------------------------------------------------------ */
+/* DIV IN CALENDAR.JS */
     .calendar_container {
       display:grid;
+      grid-template-rows: auto;
+      grid-template-columns: auto 33%;
+      background-color:rgb(50, 50, 50);
+      margin: 2.5% auto;
       width: 75%;
       height: 750px;
-      border: 1px solid black;
+      border-radius: 24px;
+      box-shadow: 0px 0px 12px 8px rgb(75, 75, 75);
     }
+      .calendar_container div {
+        padding: 12px;
+        margin: 4px;
+      }
+      .r-cont {
+        grid-column: 2/2;
+      }
+/* ------------------------------------------------------------------------------------------------------ */
+/* DIV IN MONTH.JS */
+      .m-cont {
+        display: grid;
+        grid-template-rows: 25% auto;
+        grid-template-columns: auto;
+        grid-column: 1/1;
+      }
+        .img-cont {
+          grid-row: 1/1;
+        }
+/* ------------------------------------------------------------------------------------------------------ */
+/* DIV IN DAYS.JS */
+        .days-cont {
+          grid-row: 2/2;
+        }
+/* ------------------------------------------------------------------------------------------------------ */
+
