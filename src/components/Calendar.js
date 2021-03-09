@@ -1,15 +1,19 @@
-import PropTypes from 'prop-types';
+// import PropTypes from 'prop-types';
+import Month from "./Month";
+import Reminders from "./Reminders";
 
-const Calendar = ({ color, onToggle }) => {
+const Calendar = () => {
+
     return (
-        <div style={{backgroundColor: color}} className="calendar_container" onClick={()=>onToggle()}>
-            
+        <div id="cal_container" className="calendar_container">
+            <Month />
+            <Reminders />
         </div>
     )
 }
 
-Calendar.defaultProps = {
-    color: "lightgrey"
-}
+// Calendar.defaultProps = {
+//     color: "lightgrey"
+// }
 
 export default Calendar
