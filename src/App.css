@@ -1,0 +1,22 @@
+body {
+  background-color: rgb(100, 100, 100);
+}
+
+  .primary_container{
+    display:flex;
+    width:75%;
+    min-height: 75px;
+    margin: auto;
+    text-align: center;
+    justify-content: center;
+    border: 2px inset rgb(105, 193, 252);
+    border-left-width: 0.1px;
+    border-bottom-width: 0.1px;
+  }
+
+    .calendar_container {
+      display:grid;
+      width: 75%;
+      height: 750px;
+      border: 1px solid black;
+    }
