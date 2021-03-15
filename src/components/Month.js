@@ -1,16 +1,21 @@
+
+// Component Imports
 import Days from "./Days"
 
-const Month = () => {
+const Month = ({ month, month_img }) => {
     return (
-        <div className="m-cont" style={{border: "thin solid white"}}>
-            {/* h2 below will be deleted later on */}
-            <h2 style={{gridRow:"1/1"}}>Month</h2>
+        <div className="m-cont">
             <div className="img-cont">
-                <h4>Image Goes Here</h4>
+                <img className="m-bg" src={month_img} alt=""  />
+                <h1 id="month_text" className="m-text">{month}</h1>
             </div>
             <Days />
         </div>
     )
+}
+
+Month.defaultProps = {
+    month: "January"
 }
 
 export default Month
