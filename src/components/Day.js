@@ -1,8 +1,8 @@
 
-const Day = () => {
+const Day = ({ dayNumber }) => {
     return (
-        <div style={{border: "thin solid green"}}>
-            <h2>Day</h2>
+        <div className="day-cont" style={{border: "thin solid black"}}>
+            <p>{dayNumber}</p>
         </div>
     )
 }
