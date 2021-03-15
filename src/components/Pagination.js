@@ -1,23 +1,24 @@
+import { Link } from 'react-router-dom'
+import { useState } from 'react'
 
-
-const Pagination = ({ navClick, bgColor }) => {
+const Pagination = () => {
+    const [currentMonth, makeActive] = useState("January");
 
     
     return (
         <div id="page_navigation" className="pg-nav">
-            {/* This will eventually be routes instead of anchor tags */}
-            <span id="m-1" onClick={(e)=>navClick(e)}>Jan</span>
-            <span id="m-2" onClick={(e)=>navClick(e)}>Feb</span>
-            <span id="m-3" onClick={(e)=>navClick(e)}>Mar</span>
-            <span id="m-4" onClick={(e)=>navClick(e)}>Apr</span>
-            <span id="m-5" onClick={(e)=>navClick(e)}>May</span>
-            <span id="m-6" onClick={(e)=>navClick(e)}>Jun</span>
-            <span id="m-7" onClick={(e)=>navClick(e)}>Jul</span>
-            <span id="m-8" onClick={(e)=>navClick(e)}>Aug</span>
-            <span id="m-9" onClick={(e)=>navClick(e)}>Sep</span>
-            <span id="m-10" onClick={(e)=>navClick(e)}>Oct</span>
-            <span id="m-11" onClick={(e)=>navClick(e)}>Nov</span>
-            <span id="m-12" onClick={(e)=>navClick(e)}>Dec</span>
+            <Link to='/january' style={currentMonth === 'January' ? {backgroundColor: "green"} : {backgroundColor: ""}} onClick={()=>makeActive("January")}>Jan</Link>
+            <Link to='/february'style={currentMonth === 'February' ? {backgroundColor: "green"} : {backgroundColor: ""}} onClick={()=>makeActive("February")}>Feb</Link>
+            <Link to='/march'style={currentMonth === 'March' ? {backgroundColor: "green"} : {backgroundColor: ""}} onClick={()=>makeActive("March")}>Mar</Link>
+            <Link to='/april'style={currentMonth === 'April' ? {backgroundColor: "green"} : {backgroundColor: ""}} onClick={()=>makeActive("April")}>Apr</Link>
+            <Link to='/may'style={currentMonth === 'May' ? {backgroundColor: "green"} : {backgroundColor: ""}} onClick={()=>makeActive("May")}>May</Link>
+            <Link to='/june'style={currentMonth === 'June' ? {backgroundColor: "green"} : {backgroundColor: ""}} onClick={()=>makeActive("June")}>Jun</Link>
+            <Link to='/july'style={currentMonth === 'July' ? {backgroundColor: "green"} : {backgroundColor: ""}} onClick={()=>makeActive("July")}>Jul</Link>
+            <Link to='/august'style={currentMonth === 'August' ? {backgroundColor: "green"} : {backgroundColor: ""}} onClick={()=>makeActive("August")}>Aug</Link>
+            <Link to='/september'style={currentMonth === 'September' ? {backgroundColor: "green"} : {backgroundColor: ""}} onClick={()=>makeActive("September")}>Sep</Link>
+            <Link to='/october'style={currentMonth === 'October' ? {backgroundColor: "green"} : {backgroundColor: ""}} onClick={()=>makeActive("October")}>Oct</Link>
+            <Link to='/november'style={currentMonth === 'November' ? {backgroundColor: "green"} : {backgroundColor: ""}} onClick={()=>makeActive("November")}>Nov</Link>
+            <Link to='/december' style={currentMonth === 'December' ? {backgroundColor: "green"} : {backgroundColor: ""}} onClick={()=>makeActive("December")}>Dec</Link>
         </div>
     )
 }
