@@ -11,9 +11,10 @@ function App() {
 
   return (
     <Router>
-    <div className="primary_container">
+    <div className="primary_container" style={!showCal ? {flexDirection:"column"} : {flexDirection: "row"}}>
       <Route path='/' exact render={()=>(
         <>
+        {!showCal && <h1>2021 Calendar</h1>}
           {!showCal &&
             <Link className="btn" to='/january'>
               <button 
