@@ -3,7 +3,7 @@ import { useLocation } from 'react-router-dom'
 
 import Days from "./Days"
 
-import JAN_IMG from "../Images/January_Background.jpg"
+import { MONTH_BACKGROUNDS } from "../Images/images"
 
 const Month = () => {
     const location = useLocation()
@@ -11,7 +11,7 @@ const Month = () => {
         <div className="m-cont">
             <div className="img-cont">
                 {location.pathname === '/january' ? 
-                <img className="m-bg" src={JAN_IMG} alt=""  />
+                <img className="m-bg" src={MONTH_BACKGROUNDS.January} alt=""  />
                 : location.pathname === '/february' ? 
                 <img className="m-bg"  alt=""  />
                 : location.pathname === '/march' ?
