@@ -1,7 +1,7 @@
 
-const Day = ({ dayNumber }) => {
+const Day = ({ dayNumber, dayClick }) => {
     return (
-        <div className="day-cont" style={{border: "thin solid black"}}>
+        <div id={"Day " + dayNumber} className="day-cont" style={{border: "thin solid black"}} onClick={dayClick}>
             <p>{dayNumber}</p>
         </div>
     )
