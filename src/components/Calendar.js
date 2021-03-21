@@ -1,12 +1,13 @@
 import Month from "./Month";
 import Reminders from "./Reminders";
 
-import { useState } from "react"
-
 const Calendar = () => {
+    const clickDay = (e) => {
+        console.log(e.target.id)
+    }
     return (
         <div id="cal_container" className="calendar_container">
-            <Month />
+            <Month dayClick={(e)=>clickDay(e)}/>
             <Reminders />
         </div>
     )
