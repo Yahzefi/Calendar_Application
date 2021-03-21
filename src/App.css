@@ -29,7 +29,7 @@ body {
       background-color:rgb(50, 50, 50);
       margin: 2.5% auto;
       width: 75%;
-      height: 750px;
+      height: 850px;
       border-radius: 24px;
       box-shadow: 0px 0px 10px 20px rgb(50, 50, 50);
     }
@@ -65,7 +65,7 @@ body {
 /* DIV IN MONTH.JS */
       .m-cont {
         display: grid;
-        grid-template-rows: 25% auto;
+        grid-template-rows: 25% 5% auto;
         grid-template-columns: auto;
         grid-column: 1/1;
       }
@@ -84,14 +84,36 @@ body {
           .m-bg {
             width: 100%;
             height: 100%;
+            border-top-left-radius: 36px;
+            border-bottom-left-radius: 36px;
+          }
+/* ------------------------------------------------------------------------------------------------------ */
+/* DIV IN WEEKDAYS.JS */
+        .wDays-cont {
+          display: grid;
+          grid-template-rows: 100%;
+          grid-template-columns: 14.25% 14.25% 14.25% 14.25% 14.25% 14.25% 14.25%;
+          grid-row: 2/2;
+          text-align: center;
+          align-content: center;
+        }
+          .wDays-cont h4 {
+            color: white;
+            text-decoration: underline;
           }
 /* ------------------------------------------------------------------------------------------------------ */
 /* DIV IN DAYS.JS */
         .days-cont {
           display: grid;
           grid-template-columns: 14.25% auto auto auto auto auto auto;
-          grid-template-rows: 20% auto auto auto auto;
-          grid-row: 2/2;
+          grid-template-rows: 16.6% auto auto auto auto auto;
+          grid-row: 3/3;
           color: white;
+        }
+/* ------------------------------------------------------------------------------------------------------ */
+/* DIV IN DAY.JS */
+        .day-cont:hover{
+          cursor: pointer;
+          background-color:rgb(90, 90, 90);
         }
 /* ------------------------------------------------------------------------------------------------------ */
