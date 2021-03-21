@@ -4,7 +4,7 @@ import { BrowserRouter as Router, Route, Link } from 'react-router-dom'
 import './App.css';
 import Calendar from "./components/Calendar";
 import Pagination from './components/Pagination';
-import Month from "./components/Month"
+// import Month from "./components/Month"
 
 function App() {
   const [showCal, setCalDisplay] = useState(false);
