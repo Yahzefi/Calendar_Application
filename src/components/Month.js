@@ -1,11 +1,12 @@
 
 import { useLocation } from 'react-router-dom'
 
+import Weekdays from "./Weekdays"
 import Days from "./Days"
 
 import { MONTH_BACKGROUNDS } from "../Images/images"
 
-const Month = () => {
+const Month = ({ dayClick }) => {
     const location = useLocation()
     return (
         <div className="m-cont">
@@ -61,7 +62,8 @@ const Month = () => {
             <h1 id="month_text" className="m-text">December</h1>
             }
             </div>
-            <Days />
+            <Weekdays />
+            <Days dayClick={dayClick}/>
         </div>
     )
 }
