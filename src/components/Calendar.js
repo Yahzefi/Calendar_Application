@@ -1,14 +1,20 @@
+
+
 import Month from "./Month";
 import Reminders from "./Reminders";
 
 const Calendar = () => {
-    const clickDay = (e) => {
-        console.log(e.target.id)
+    const addReminder = (text) => {
+        let r_list = document.getElementById("r_list");
+        let newReminder = document.createElement('li');
+        newReminder.setAttribute("class", "r-list-items")
+        newReminder.textContent = text;
+        r_list.appendChild(newReminder);
     }
     return (
         <div id="cal_container" className="calendar_container">
-            <Month dayClick={(e)=>clickDay(e)}/>
-            <Reminders />
+            <Month />
+            <Reminders addReminder={(text)=>addReminder(text)}/>
         </div>
     )
 }
