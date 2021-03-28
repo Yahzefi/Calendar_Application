@@ -6,7 +6,7 @@ import Days from "./Days"
 
 import { MONTH_BACKGROUNDS } from "../Images/images"
 
-const Month = ({ dayClick }) => {
+const Month = () => {
     const location = useLocation()
     return (
         <div className="m-cont">
@@ -14,56 +14,56 @@ const Month = ({ dayClick }) => {
                 {location.pathname === '/january' ? 
                 <img className="m-bg" src={MONTH_BACKGROUNDS.January} alt=""  />
                 : location.pathname === '/february' ? 
-                <img className="m-bg"  alt=""  />
+                <img className="m-bg"  src={MONTH_BACKGROUNDS.February} alt=""  />
                 : location.pathname === '/march' ?
-                <img className="m-bg"  alt=""  />
+                <img className="m-bg" src={MONTH_BACKGROUNDS.March} alt=""  />
                 : location.pathname === '/april' ?
-                <img className="m-bg"  alt=""  />
+                <img className="m-bg" src={MONTH_BACKGROUNDS.April} alt=""  />
                 : location.pathname === '/may' ?
-                <img className="m-bg"  alt=""  />
+                <img className="m-bg" src={MONTH_BACKGROUNDS.May} alt=""  />
                 : location.pathname === '/june' ?
-                <img className="m-bg"  alt=""  />
+                <img className="m-bg" src={MONTH_BACKGROUNDS.June} alt=""  />
                 : location.pathname === '/july' ?
-                <img className="m-bg"  alt=""  />
+                <img className="m-bg" src={MONTH_BACKGROUNDS.July} alt=""  />
                 : location.pathname === '/august' ?
-                <img className="m-bg"  alt=""  />
+                <img className="m-bg" src={MONTH_BACKGROUNDS.August} alt=""  />
                 : location.pathname === '/september' ?
-                <img className="m-bg"  alt=""  />
+                <img className="m-bg" src={MONTH_BACKGROUNDS.September} alt=""  />
                 : location.pathname === '/october' ?
-                <img className="m-bg"  alt=""  />
+                <img className="m-bg" src={MONTH_BACKGROUNDS.October} alt=""  />
                 : location.pathname === '/november' ?
-                <img className="m-bg"  alt=""  />
+                <img className="m-bg" src={MONTH_BACKGROUNDS.November} alt=""  />
                 : location.pathname === '/december' &&
-                <img className="m-bg"  alt=""  />
+                <img className="m-bg" src={MONTH_BACKGROUNDS.December} alt=""  />
             }
             {location.pathname === '/january' ? 
             <h1 id="month_text" className="m-text">January</h1>
             : location.pathname === '/february' ?
-            <h1 id="month_text" className="m-text">February</h1>
+            <h1 id="month_text" className="m-text" style={{color:"pink"}}>February</h1>
             : location.pathname === '/march' ?
-            <h1 id="month_text" className="m-text">March</h1>
+            <h1 id="month_text" className="m-text" style={{color:"lightgreen"}}>March</h1>
             : location.pathname === '/april' ?
-            <h1 id="month_text" className="m-text">April</h1>
+            <h1 id="month_text" className="m-text" style={{color:"blue"}}>April</h1>
             : location.pathname === '/may' ?
-            <h1 id="month_text" className="m-text">May</h1>
+            <h1 id="month_text" className="m-text" style={{color:"yellowgreen"}}>May</h1>
             : location.pathname === '/june' ?
-            <h1 id="month_text" className="m-text">June</h1>
+            <h1 id="month_text" className="m-text" style={{color: "yellow"}}>June</h1>
             : location.pathname === '/july' ?
-            <h1 id="month_text" className="m-text">July</h1>
+            <h1 id="month_text" className="m-text" style={{color:"darkred"}}>July</h1>
             : location.pathname === '/august' ?
-            <h1 id="month_text" className="m-text">August</h1>
+            <h1 id="month_text" className="m-text" style={{color:"darkorange"}}>August</h1>
             : location.pathname === '/september' ?
-            <h1 id="month_text" className="m-text">September</h1>
+            <h1 id="month_text" className="m-text" style={{color:"brown"}}>September</h1>
             : location.pathname === '/october' ?
-            <h1 id="month_text" className="m-text">October</h1>
+            <h1 id="month_text" className="m-text" style={{color:"orange"}}>October</h1>
             : location.pathname === '/november' ?
-            <h1 id="month_text" className="m-text">November</h1>
+            <h1 id="month_text" className="m-text" style={{color:"orangered"}}>November</h1>
             : location.pathname === '/december' &&
-            <h1 id="month_text" className="m-text">December</h1>
+            <h1 id="month_text" className="m-text" style={{color:"darkgreen"}}>December</h1>
             }
             </div>
             <Weekdays />
-            <Days dayClick={dayClick}/>
+            <Days />
         </div>
     )
 }
