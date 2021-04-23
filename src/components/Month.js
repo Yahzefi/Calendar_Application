@@ -9,6 +9,7 @@ import { MONTH_BACKGROUNDS } from "../Images/images"
 const Month = () => {
     const location = useLocation()
     return (
+        // Changes the background image behind the month's name depending on the page location
         <div className="m-cont">
             <div className="img-cont">
                 {location.pathname === '/january' ? 
@@ -36,6 +37,7 @@ const Month = () => {
                 : location.pathname === '/december' &&
                 <img className="m-bg" src={MONTH_BACKGROUNDS.December} alt=""  />
             }
+            {/* Changes the text color of the month's title depending on the page location */}
             {location.pathname === '/january' ? 
             <h1 id="month_text" className="m-text">January</h1>
             : location.pathname === '/february' ?
