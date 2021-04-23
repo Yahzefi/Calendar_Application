@@ -1,9 +1,8 @@
-
-
 import Month from "./Month";
 import Reminders from "./Reminders";
 
 const Calendar = () => {
+    // addReminder passed up from Reminders.js
     const addReminder = (text) => {
         let r_list = document.getElementById("r_list");
         let newReminder = document.createElement('li');
