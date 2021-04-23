@@ -11,6 +11,7 @@ function App() {
 
   return (
     <Router>
+      {/* Conditionals relate to whether or not the calendar is "pulled up" or not */}
     <div className="primary_container" style={!showCal ? {flexDirection:"column"} : {flexDirection: "row"}}>
       <Route path='/' exact render={()=>(
         <>
