@@ -6,6 +6,7 @@ const Pagination = () => {
 
     
     return (
+        // The component responsible for switching between pages and updating the state upon completion
         <div id="page_navigation" className="pg-nav">
             <Link to='/january' style={currentMonth === 'January' ? {backgroundColor: "green"} : {backgroundColor: ""}} onClick={()=>makeActive("January")}>Jan</Link>
             <Link to='/february'style={currentMonth === 'February' ? {backgroundColor: "green"} : {backgroundColor: ""}} onClick={()=>makeActive("February")}>Feb</Link>
