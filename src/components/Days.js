@@ -4,11 +4,14 @@ import { useLocation } from "react-router-dom"
 
 const Days = () => {
     const location = useLocation()
+    // An array with the total number of blocks available for use on the calendar
     let daysArr = [];
     for(let i=1; i < 43; i++){
         daysArr.push(i)
     }
     return (
+        // Equations within conditionals act to display the proper number in each block depending on the month
+        // The top left block is always considered "day 1", so to make Day 4 ( or any other ), the following takes place
         <div className="days-cont">
             {location.pathname === "/january" ? daysArr.map((day)=>(
                 <Day key={"Day " + day} dayNumber={day < 6 ? "" : day < 37 ? (day-5): ""} />
